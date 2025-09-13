@@ -1,13 +1,13 @@
 {
   "name": "personal-site",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun run index.ts",
-    "dev": "bun --watch index.ts",
-    "build:css": "tailwindcss -i public/main.css -o dist/main.css --minify",
-    "dev:css": "tailwindcss -i public/main.css -o dist/main.css --watch"
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts",
+    "build:css": "tailwindcss -i src/styles/main.css -o dist/main.css --minify",
+    "dev:css": "tailwindcss -i src/styles/main.css -o dist/main.css --watch"
   },
   "devDependencies": {
     "@types/bun": "latest",
