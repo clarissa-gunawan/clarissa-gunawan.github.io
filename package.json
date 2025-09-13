@@ -1,25 +1,21 @@
 {
   "name": "personal-site",
-  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun run src/index.ts",
-    "dev": "bun --watch src/index.ts",
-    "build:css": "tailwindcss -i src/styles/main.css -o dist/main.css --minify",
-    "dev:css": "tailwindcss -i src/styles/main.css -o dist/main.css --watch"
+    "dev": "concurrently --kill-others --prefix-colors \"cyan,green,blue\" --names \"BUILD,CSS,SERVE\" \"bun --watch scripts/build.ts\" \"tailwindcss -i src/styles/main.css -o dist/main.css --watch\" \"bun --watch scripts/serve.ts\"",
+    "build": "bun run scripts/build.ts",
+    "serve": "bun run scripts/serve.ts",
+    "preview": "bun run build && bun run serve",
+    "clean": "rm -rf dist"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/bun": "latest",
     "autoprefixer": "^10.4.21",
-    "bun-plugin-tailwind": "^0.0.15",
-    "tailwindcss": "^4.1.13"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^4.1.13",
     "@tailwindcss/cli": "^4.1.13",
-    "hono": "^4.9.7"
+    "typescript": "^5"
   }
 }
