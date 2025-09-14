@@ -9,7 +9,7 @@ function createHTML(title: string, content: string): string {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div class="container mx-auto p-8">
@@ -34,9 +34,9 @@ async function buildSite() {
       <h1 class="text-4xl font-bold text-blue-600 mb-4">Hello world</h1>
       <p class="text-lg mb-4">Welcome to my personal site!</p>
       <div class="space-y-2">
-        <a href="/work.html" class="block text-blue-500 hover:text-blue-700">Work & Resume</a>
-        <a href="/touch-grass.html" class="block text-blue-500 hover:text-blue-700">Touch Grass (Hiking)</a>
-        <a href="/daily-sudoku.html" class="block text-blue-500 hover:text-blue-700">Daily Sudoku</a>
+        <a href="work.html" class="block text-blue-500 hover:text-blue-700">Work & Resume</a>
+        <a href="touch-grass.html" class="block text-blue-500 hover:text-blue-700">Touch Grass (Hiking)</a>
+        <a href="daily-sudoku.html" class="block text-blue-500 hover:text-blue-700">Daily Sudoku</a>
       </div>
     `
   );
@@ -49,7 +49,7 @@ async function buildSite() {
     `
       <h1 class="text-3xl font-bold mb-4">Work & Resume</h1>
       <p class="text-lg mb-4">My resume and work experience will go here.</p>
-      <a href="/index.html" class="text-blue-500 hover:text-blue-700">← Back to Home</a>
+      <a href="index.html" class="text-blue-500 hover:text-blue-700">← Back to Home</a>
     `
   );
   writeFileSync(join(distDir, 'work.html'), workHTML);
@@ -79,7 +79,7 @@ async function buildSite() {
           <!-- Top 10 hikes will appear here -->
         </div>
       </div>
-      <a href="/index.html" class="block mt-4 text-blue-500 hover:text-blue-700">← Back to Home</a>
+      <a href="index.html" class="block mt-4 text-blue-500 hover:text-blue-700">← Back to Home</a>
     `
   );
   writeFileSync(join(distDir, 'touch-grass.html'), touchGrassHTML);
@@ -110,8 +110,8 @@ async function buildSite() {
           </button>
         </div>
         <div id="result" class="mt-4 hidden"></div>
-      </div>
-      <a href="/index.html" class="block mt-4 text-blue-500 hover:text-blue-700">← Back to Home</a>
+        </div>
+      <a href="index.html" class="block mt-4 text-blue-500 hover:text-blue-700">← Back to Home</a>
     `
   );
   writeFileSync(join(distDir, 'daily-sudoku.html'), sudokuHTML);
@@ -120,6 +120,11 @@ async function buildSite() {
   console.log('🎨 Building CSS...');
   const { execSync } = await import('child_process');
   execSync('tailwindcss -i src/styles/main.css -o dist/main.css --minify', { stdio: 'inherit' });
+  
+  // Create .nojekyll to disable Jekyll processing on GitHub Pages
+  if (!existsSync(join(distDir, '.nojekyll'))) {
+    writeFileSync(join(distDir, '.nojekyll'), '');
+  }
   
   console.log('✅ Build complete!');
   console.log(`📁 Files generated in: ${distDir}/`);
