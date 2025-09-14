@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Sudoku - Clarissa Gunawan</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container mx-auto p-8">
+    
+      <h1 class="text-3xl font-bold mb-4">Daily Sudoku 🧩</h1>
+      <p class="text-lg mb-4">Challenge yourself with daily sudoku puzzles!</p>
+      <div class="bg-yellow-50 p-4 rounded-lg mb-4">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-lg font-semibold">Difficulty: Medium</span>
+          <div class="timer text-xl font-mono">
+            Time: <span id="timer">00:00</span>
+          </div>
+        </div>
+        <div class="sudoku-grid grid grid-cols-9 gap-1 mb-4" id="sudoku-grid">
+          <!-- Sudoku grid will be generated here -->
+        </div>
+        <div class="flex gap-4">
+          <button id="check-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Check Solution
+          </button>
+          <button id="hint-btn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+            Get Hint
+          </button>
+        </div>
+        <div id="result" class="mt-4 hidden"></div>
+        </div>
+      <a href="index.html" class="block mt-4 text-blue-500 hover:text-blue-700">← Back to Home</a>
+    
+  </div>
+</body>
+</html>
