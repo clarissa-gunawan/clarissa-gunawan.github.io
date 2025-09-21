@@ -1,0 +1,18 @@
+#f4f2f0 - white light
+#e5e0dd - white dark
+#e5e0d2 - beige light
+#c8c2ae - beige dark
+#cbb4a4 - caramel light
+#b39980 - caramel dark
+#e2d0c6 - dusty blush light
+#cbae9b - dusty blush dark
+#cc9c8d - dusty terracotta light
+#ad6b5b - dusty terracotta dark
+#9faabd - frost light
+#6f8097 - frost dark
+#717955 - olive light
+#4d5231 - olive dark
+#766357 - chocolate light
+#482619 - chocolate dark
+#565e64 - charcol light
+#222b34 - charcol dark

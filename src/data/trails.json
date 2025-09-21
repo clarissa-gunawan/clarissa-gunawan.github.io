@@ -1,0 +1,116 @@
+{
+  "s": {
+    "name": "Legendary",
+    "description": "Life-changing experiences that redefined what I thought was possible. These trails pushed every limit and created memories I'll never forget.",
+    "trails": [
+      {
+        "name": "Mount Washington Presidential Traverse",
+        "location": "White Mountains, NH",
+        "distance": "23.1 mi",
+        "elevation": "9,200 ft",
+        "time": "14.5 hrs",
+        "description": "Brutal weather above treeline tested every piece of gear and every lesson learned. The most technically and mentally challenging hike I've ever completed.",
+        "image": "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Half Dome Cable Route",
+        "location": "Yosemite, CA",
+        "distance": "16.4 mi",
+        "elevation": "4,800 ft",
+        "time": "12 hrs",
+        "description": "The cables section is pure exposure and determination. Standing on that summit with 360° views of Yosemite Valley was a religious experience.",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "a": {
+    "name": "Outstanding",
+    "description": "Exceptional trails that combine stunning scenery, challenging terrain, and unforgettable moments. These are the hikes I recommend to experienced adventurers.",
+    "trails": [
+      {
+        "name": "Angels Landing Chain Section",
+        "location": "Zion, UT",
+        "distance": "5.4 mi",
+        "elevation": "1,488 ft",
+        "time": "6.5 hrs",
+        "description": "Mental game stronger than physical. The final half-mile chain section requires complete focus and zero fear of heights.",
+        "image": "https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Mount Katahdin - Knife Edge",
+        "location": "Baxter State Park, ME",
+        "distance": "10.4 mi",
+        "elevation": "4,267 ft",
+        "time": "9 hrs",
+        "description": "The Knife Edge traverse is Maine's most exposed ridge walk. Wind, weather, and technical scrambling make this a true adventure.",
+        "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Mount Whitney Summit Trail",
+        "location": "Sierra Nevada, CA",
+        "distance": "22 mi",
+        "elevation": "6,178 ft",
+        "time": "15 hrs",
+        "description": "Highest peak in the lower 48. The altitude hit hard around 13,000 feet, but pushing through to 14,505 feet was pure determination.",
+        "image": "https://images.unsplash.com/photo-1464822759844-d150ad6cbc95?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "b": {
+    "name": "Excellent",
+    "description": "Solid, rewarding hikes with great scenery and moderate challenges. Perfect for building experience and enjoying beautiful landscapes without extreme difficulty.",
+    "trails": [
+      {
+        "name": "Old Rag Mountain Circuit",
+        "location": "Shenandoah, VA",
+        "distance": "9.2 mi",
+        "elevation": "2,510 ft",
+        "time": "6 hrs",
+        "description": "Classic rock scramble with 360° views from the summit. The boulder field is playful and challenging without being dangerous.",
+        "image": "https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Mount Monadnock - White Dot Trail",
+        "location": "Jaffrey, NH",
+        "distance": "3.8 mi",
+        "elevation": "1,700 ft",
+        "time": "4 hrs",
+        "description": "Short but steep with a rewarding bald summit. Perfect training hike that builds leg strength and confidence.",
+        "image": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Franconia Ridge Traverse",
+        "location": "White Mountains, NH",
+        "distance": "8.6 mi",
+        "elevation": "3,260 ft",
+        "time": "7 hrs",
+        "description": "Spectacular above-treeline ridge walk on a perfect fall day. The colors and views were absolutely stunning.",
+        "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "c": {
+    "name": "Good",
+    "description": "Enjoyable hikes that serve their purpose but lack the wow factor of higher tiers. Good for training, easy days, or when conditions aren't ideal.",
+    "trails": [
+      {
+        "name": "Bear Mountain via Appalachian Trail",
+        "location": "Bear Mountain, NY",
+        "distance": "4.2 mi",
+        "elevation": "1,305 ft",
+        "time": "3.5 hrs",
+        "description": "Easy access from NYC made this a convenient training hike. Views were limited by haze, but good for building base fitness.",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "name": "Mount Major Trail",
+        "location": "Alton Bay, NH",
+        "distance": "3.8 mi",
+        "elevation": "1,150 ft",
+        "time": "3 hrs",
+        "description": "Crowded family-friendly hike with decent lake views. Good for an easy day or bringing less experienced hikers.",
+        "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  }
+}

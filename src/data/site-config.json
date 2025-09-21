@@ -1,0 +1,32 @@
+{
+  "siteName": "Clarissa Gunawan",
+  "pages": [
+    {
+      "id": "work",
+      "title": "Work & Resume",
+      "description": "My professional experience and skills",
+      "color": "blue",
+      "emoji": "💼"
+    },
+    {
+      "id": "touch-grass",
+      "title": "Touch Grass 🥾",
+      "description": "Hiking adventures and outdoor experiences",
+      "color": "green",
+      "emoji": "🥾"
+    },
+    {
+      "id": "daily-sudoku",
+      "title": "Daily Sudoku 🧩",
+      "description": "Challenge yourself with daily puzzles",
+      "color": "yellow",
+      "emoji": "🧩"
+    }
+  ],
+  "stats": {
+    "totalMiles": 142,
+    "feetClimbed": 34200,
+    "statesExplored": 8,
+    "hoursHiking": 127
+  }
+}
