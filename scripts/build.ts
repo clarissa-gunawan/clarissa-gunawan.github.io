@@ -65,7 +65,7 @@ async function buildSite() {
   
   // Build CSS
   console.log('🎨 Building CSS...');
-  execSync("tailwindcss -i src/styles/main.css -o dist/main.css --minify", { stdio: 'inherit' });
+  execSync("tailwindcss -i src/styles/main.css -o dist/main.css --minify --content 'src/**/*.{tsx,ts,html,js}'", { stdio: 'inherit' });
   
   // Copy page-specific styles
   console.log('📁 Copying page styles...');
