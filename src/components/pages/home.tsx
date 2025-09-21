@@ -20,16 +20,16 @@ export function HomePage(): string {
   const pageCards = pages.map((page) => (
     <a
       href={`${page.id}.html`}
-      class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+      class="card block p-6 hover:shadow-lg transition-shadow"
     >
-      <h2 class={`text-xl font-semibold mb-2 text-${page.color}-600`}>{page.title}</h2>
-      <p class="text-gray-600">{page.description}</p>
+      <h2 class="text-xl font-semibold mb-2 text-foreground">{page.title}</h2>
+      <p class="text-muted-foreground">{page.description}</p>
     </a>
   ));
 
   return (
     <main>
-      <h1 class="text-4xl font-bold text-blue-600 mb-4">Hello world</h1>
+      <h1 class="text-4xl font-bold text-primary mb-4">Hello world</h1>
       <p class="text-lg mb-4">Welcome to my personal site!</p>
       <div class="grid md:grid-cols-3 gap-6 mt-8">{pageCards}</div>
     </main>

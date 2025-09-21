@@ -27,16 +27,16 @@ export function TouchGrassPage(): string {
   return (
     <Fragment>
       {BackButton()}
-      <header class="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+      <header class="bg-background border-b border-border fixed w-full top-0 z-50">
         <nav class="max-w-7xl mx-auto px-8 py-6">
           <div class="flex justify-between items-center">
             <div class="logo">
-              <span class="text-sm font-light tracking-widest uppercase text-gray-800">Trail Collection</span>
+              <span class="text-sm font-light tracking-widest uppercase text-foreground">Trail Collection</span>
             </div>
             <div class="nav-links hidden md:flex space-x-8">
-              <a href="#random" class="nav-link text-sm font-light tracking-wide text-gray-600 hover:text-gray-900 transition-colors">Discovery</a>
-              <a href="#stats" class="nav-link text-sm font-light tracking-wide text-gray-600 hover:text-gray-900 transition-colors">Statistics</a>
-              <a href="#tiers" class="nav-link text-sm font-light tracking-wide text-gray-600 hover:text-gray-900 transition-colors">Tiers</a>
+              <a href="#random" class="nav-link text-sm font-light tracking-wide text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
+              <a href="#stats" class="nav-link text-sm font-light tracking-wide text-muted-foreground hover:text-foreground transition-colors">Statistics</a>
+              <a href="#tiers" class="nav-link text-sm font-light tracking-wide text-muted-foreground hover:text-foreground transition-colors">Tiers</a>
             </div>
           </div>
         </nav>
@@ -44,28 +44,28 @@ export function TouchGrassPage(): string {
       <main class="tier-ranking-portfolio pt-24">
         <nav class="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
           <div class="flex flex-col space-y-4">
-            <button class="nav-dot w-2 h-8 bg-gray-300 hover:bg-gray-600 transition-colors" data-section="random"></button>
-            <button class="nav-dot w-2 h-8 bg-gray-300 hover:bg-gray-600 transition-colors" data-section="stats"></button>
-            <button class="nav-dot w-2 h-8 bg-gray-300 hover:bg-gray-600 transition-colors" data-section="tiers"></button>
+            <button class="nav-dot w-2 h-8 bg-foreground/30 hover:bg-foreground/60 transition-colors" data-section="random"></button>
+            <button class="nav-dot w-2 h-8 bg-foreground/30 hover:bg-foreground/60 transition-colors" data-section="stats"></button>
+            <button class="nav-dot w-2 h-8 bg-foreground/30 hover:bg-foreground/60 transition-colors" data-section="tiers"></button>
           </div>
         </nav>
 
-        <section id="random-spread" class="min-h-screen flex bg-white">
+        <section id="random-spread" class="min-h-screen flex bg-background">
           <div class="w-1/2 flex items-center p-16 lg:p-24">
             <div class="max-w-lg">
               <div class="mb-12">
-                <div class="text-xs text-gray-500 tracking-widest uppercase mb-6">Discovery</div>
-                <h2 class="text-4xl lg:text-5xl font-light text-gray-900 mb-6 leading-tight">
+                <div class="text-xs text-muted-foreground tracking-widest uppercase mb-6">Discovery</div>
+                <h2 class="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
                   Serendipitous<br /><span class="font-thin italic">Trails</span>
                 </h2>
-                <div class="w-16 h-px bg-gray-300 mb-8"></div>
-                <p class="text-base text-gray-600 leading-relaxed mb-8 font-light">
+                <div class="w-16 h-px bg-border mb-8"></div>
+                <p class="text-base text-muted-foreground leading-relaxed mb-8 font-light">
                   Let chance guide your next adventure. Each trail tells a story,
                   and sometimes the best stories are the ones we never planned to find.
                 </p>
               </div>
 
-              <button id="generate-hike" class="bg-gray-900 text-white px-6 py-3 text-sm font-light tracking-wide transition-colors hover:bg-gray-800">
+              <button id="generate-hike" class="bg-accent text-white px-6 py-3 text-sm font-light tracking-wide transition-colors hover:bg-accent/90">
                 Generate Trail
               </button>
 
@@ -79,7 +79,7 @@ export function TouchGrassPage(): string {
               alt="Forest trail path"
               class="w-full h-full object-cover"
             />
-            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+            <div class="absolute inset-0 bg-foreground/20"></div>
             <div class="absolute bottom-8 left-8 text-white">
               <div class="text-sm font-light mb-1">Serendipitous Discovery</div>
               <div class="text-xs opacity-80">Photography by Clarissa Gunawan</div>
@@ -88,18 +88,18 @@ export function TouchGrassPage(): string {
           </div>
         </section>
 
-        <section id="stats-spread" class="min-h-screen flex bg-gray-50">
+        <section id="stats-spread" class="min-h-screen flex bg-background">
           <div class="w-1/2 flex items-center p-16 lg:p-24">
             <div class="max-w-lg">
               <div class="mb-12">
-                <div class="text-xs text-gray-500 tracking-widest uppercase mb-6">Statistics</div>
-                <h2 class="text-4xl lg:text-5xl font-light text-gray-900 mb-6 leading-tight">
+                <div class="text-xs text-muted-foreground tracking-widest uppercase mb-6">Statistics</div>
+                <h2 class="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
                   Trail
                   <br />
                   <span class="font-thin italic">Metrics</span>
                 </h2>
-                <div class="w-16 h-px bg-gray-300 mb-8"></div>
-                <p class="text-base text-gray-600 leading-relaxed mb-8 font-light">
+                <div class="w-16 h-px bg-border mb-8"></div>
+                <p class="text-base text-muted-foreground leading-relaxed mb-8 font-light">
                   A comprehensive overview of miles hiked, elevation gained, and adventures completed across different terrains and challenges.
                 </p>
               </div>
@@ -109,17 +109,17 @@ export function TouchGrassPage(): string {
           <div class="w-1/2 flex items-center justify-center p-16 lg:p-24">{StatsSummary(stats)}</div>
         </section>
 
-        <section id="tiers-spread" class="min-h-screen bg-white">
+        <section id="tiers-spread" class="min-h-screen bg-background">
           <div class="container mx-auto px-8 py-16">
             <div class="text-center mb-16">
-              <div class="text-xs text-gray-500 tracking-widest uppercase mb-6">Tier Rankings</div>
-              <h2 class="text-4xl lg:text-5xl font-light text-gray-900 mb-6 leading-tight">
+              <div class="text-xs text-muted-foreground tracking-widest uppercase mb-6">Tier Rankings</div>
+              <h2 class="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
                 Trail
                 <br />
                 <span class="font-thin italic">Classifications</span>
               </h2>
-              <div class="w-16 h-px bg-gray-300 mx-auto mb-8"></div>
-              <p class="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto font-light">
+              <div class="w-16 h-px bg-border mx-auto mb-8"></div>
+              <p class="text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto font-light">
                 Each trail is ranked based on difficulty, scenery, challenge, and personal impact. From legendary S-tier adventures to solid B-tier training hikes.
               </p>
             </div>

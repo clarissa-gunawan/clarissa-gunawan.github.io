@@ -10,14 +10,14 @@
     },
     {
       "id": "touch-grass",
-      "title": "Touch Grass 🥾",
+      "title": "Touch Grass",
       "description": "Hiking adventures and outdoor experiences",
       "color": "green",
       "emoji": "🥾"
     },
     {
       "id": "daily-sudoku",
-      "title": "Daily Sudoku 🧩",
+      "title": "Daily Sudoku",
       "description": "Challenge yourself with daily puzzles",
       "color": "yellow",
       "emoji": "🧩"
@@ -30,3 +30,4 @@
     "hoursHiking": 127
   }
 }
+

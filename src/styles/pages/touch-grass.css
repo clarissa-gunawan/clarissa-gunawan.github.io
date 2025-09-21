@@ -5,8 +5,8 @@ body {
 
 /* Header Navigation */
 header {
-  background: white;
-  border-bottom: 1px solid #e8e8e8;
+  background: var(--color-background);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
   position: fixed;
   width: 100%;
   top: 0;
@@ -18,7 +18,7 @@ header {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #2c2c2c;
+  color: var(--color-text);
 }
 
 .nav-link {
@@ -26,16 +26,16 @@ header {
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #666;
+  color: color-mix(in oklab, var(--color-text) 70%, white 30%);
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #2c2c2c;
+  color: var(--color-text);
 }
 
 .nav-link.active {
-  color: #2c2c2c;
+  color: var(--color-text);
   font-weight: 400;
 }
 
@@ -44,7 +44,7 @@ header {
 }
 
 .nav-dot.active {
-  background-color: #111827;
+  background-color: var(--color-accent);
 }
 
 /* Stats Summary */
@@ -52,21 +52,21 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  background: white;
+  background: var(--color-background);
   padding: 60px;
   border-radius: 2px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 60px color-mix(in oklab, var(--color-text) 5%, transparent);
 }
 
 .summary-stat {
   text-align: center;
   padding: 20px;
-  border-left: 2px solid #e8f4ff;
+  border-left: 2px solid color-mix(in oklab, var(--color-secondary) 40%, transparent);
   transition: border-color 0.3s ease;
 }
 
 .summary-stat:hover {
-  border-left-color: #4a90e2;
+  border-left-color: var(--color-accent);
 }
 
 .summary-stat:first-child {
@@ -76,7 +76,7 @@ header {
 .summary-number {
   font-size: 48px;
   font-weight: 200;
-  color: #2c2c2c;
+  color: var(--color-text);
   margin-bottom: 10px;
 }
 
@@ -85,14 +85,14 @@ header {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #666;
+  color: color-mix(in oklab, var(--color-text) 60%, white 40%);
 }
 
 /* Tier Sections */
 .tier-section {
-  background: white;
+  background: var(--color-background);
   border-radius: 2px;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 40px 100px color-mix(in oklab, var(--color-text) 8%, transparent);
   overflow: hidden;
 }
 
@@ -101,8 +101,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 40px 60px;
-  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
-  border-bottom: 1px solid #e8e8e8;
+  background: var(--color-background);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
 }
 
 .tier-info {
@@ -126,19 +126,19 @@ header {
 }
 
 .tier-s .tier-badge {
-  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
 }
 
 .tier-a .tier-badge {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
 }
 
 .tier-b .tier-badge {
-  background: linear-gradient(135deg, #26de81, #20bf6b);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
 }
 
 .tier-c .tier-badge {
-  background: linear-gradient(135deg, #fed330, #f7b731);
+  background: linear-gradient(135deg, var(--color-background), var(--color-secondary));
 }
 
 .tier-badge::before {
@@ -148,20 +148,20 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in oklab, var(--color-background) 20%, transparent) 0%, transparent 70%);
 }
 
 .tier-details h2 {
   font-size: 32px;
   font-weight: 200;
   margin-bottom: 8px;
-  color: #2c2c2c;
+  color: var(--color-text);
 }
 
 .tier-description {
   font-size: 14px;
   font-weight: 300;
-  color: #666;
+  color: color-mix(in oklab, var(--color-text) 70%, white 30%);
   line-height: 1.6;
   max-width: 500px;
 }
@@ -169,7 +169,7 @@ header {
 .tier-count {
   font-size: 14px;
   font-weight: 300;
-  color: #999;
+  color: color-mix(in oklab, var(--color-text) 55%, white 45%);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -187,15 +187,15 @@ header {
   grid-template-columns: 120px 1fr;
   gap: 30px;
   padding: 30px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
   border-radius: 2px;
   transition: all 0.3s ease;
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="16" viewBox="0 0 32 16" fill="%234a90e2"><ellipse cx="24" cy="8" rx="7" ry="4" opacity="0.8"/><ellipse cx="8" cy="8" rx="5" ry="3" opacity="0.8"/><path d="M13 8 L19 8"/><circle cx="10" cy="6" r="0.8" fill="white"/><circle cx="12" cy="7" r="0.8" fill="white"/><circle cx="20" cy="6" r="0.8" fill="white"/></svg>'), auto;
 }
 
 .trail-card:hover {
-  border-color: #4a90e2;
-  box-shadow: 0 20px 60px rgba(74, 144, 226, 0.1);
+  border-color: var(--color-accent);
+  box-shadow: 0 20px 60px color-mix(in oklab, var(--color-accent) 10%, transparent);
   transform: translateY(-2px);
 }
 
@@ -217,14 +217,14 @@ header {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 8px;
-  color: #2c2c2c;
+  color: var(--color-text);
   line-height: 1.2;
 }
 
 .trail-location {
   font-size: 12px;
   font-weight: 300;
-  color: #999;
+  color: color-mix(in oklab, var(--color-text) 55%, white 45%);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -239,10 +239,10 @@ header {
 .trail-stat {
   font-size: 11px;
   font-weight: 300;
-  color: #666;
+  color: color-mix(in oklab, var(--color-text) 70%, white 30%);
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-left: 1px solid #e8e8e8;
+  border-left: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
   padding-left: 10px;
 }
 
@@ -255,7 +255,7 @@ header {
   display: block;
   font-size: 16px;
   font-weight: 300;
-  color: #2c2c2c;
+  color: var(--color-text);
   text-transform: none;
   letter-spacing: 0;
   margin-top: 2px;
@@ -265,13 +265,13 @@ header {
   font-size: 13px;
   font-weight: 300;
   line-height: 1.6;
-  color: #666;
+  color: color-mix(in oklab, var(--color-text) 70%, white 30%);
 }
 
 /* GPX Mini Visualization */
 .gpx-mini {
   height: 30px;
-  background: linear-gradient(135deg, #f8f8f8 0%, #e8f4ff 100%);
+  background: linear-gradient(135deg, var(--color-background) 0%, color-mix(in oklab, var(--color-secondary) 30%, transparent) 100%);
   border-radius: 2px;
   margin-top: 15px;
   position: relative;
@@ -284,7 +284,7 @@ header {
   left: 8px;
   right: 8px;
   height: 1px;
-  background: linear-gradient(to right, #4a90e2, #6bb6ff);
+  background: linear-gradient(to right, var(--color-accent), var(--color-secondary));
   opacity: 0.6;
 }
 
@@ -297,18 +297,18 @@ header {
   height: 15px;
   background: linear-gradient(to right, 
       transparent 0%, 
-      rgba(74, 144, 226, 0.1) 25%, 
-      rgba(74, 144, 226, 0.2) 50%, 
-      rgba(74, 144, 226, 0.1) 75%, 
+      color-mix(in oklab, var(--color-accent) 10%, transparent) 25%, 
+      color-mix(in oklab, var(--color-accent) 20%, transparent) 50%, 
+      color-mix(in oklab, var(--color-accent) 10%, transparent) 75%, 
       transparent 100%);
 }
 
 /* Whale shark swimming pattern */
 .whale-shark-pattern {
   background-image: 
-    radial-gradient(circle at 20% 30%, rgba(107, 114, 128, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 80% 70%, rgba(107, 114, 128, 0.1) 1px, transparent 1px),
-    radial-gradient(circle at 40% 80%, rgba(107, 114, 128, 0.1) 1px, transparent 1px);
+    radial-gradient(circle at 20% 30%, color-mix(in oklab, var(--color-text) 10%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, color-mix(in oklab, var(--color-text) 10%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, color-mix(in oklab, var(--color-text) 10%, transparent) 1px, transparent 1px);
   background-size: 200px 200px, 150px 150px, 180px 180px;
   animation: swim 30s linear infinite;
 }
@@ -325,8 +325,8 @@ section {
 
 /* Museum exhibit styling */
 .exhibit-card {
-  border: 1px solid #e5e7eb;
-  background: #fafafa;
+  border: 1px solid color-mix(in oklab, var(--color-text) 20%, transparent);
+  background: var(--color-background);
 }
 
 /* Mobile responsive stacking */

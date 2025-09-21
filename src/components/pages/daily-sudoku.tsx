@@ -9,10 +9,10 @@ export function DailySudokuPage(): string {
         <h1 class="text-3xl font-bold mb-6">Daily Sudoku 🧩</h1>
         <p class="text-lg mb-6">Challenge yourself with daily sudoku puzzles!</p>
 
-        <div class="bg-yellow-50 p-6 rounded-lg">
+        <div class="bg-secondary/10 p-6 rounded-lg">
           <div class="flex justify-between items-center mb-6">
             <span class="text-lg font-semibold">Difficulty: Medium</span>
-            <div class="timer text-xl font-mono bg-white px-4 py-2 rounded">
+            <div class="timer text-xl font-mono bg-background text-foreground px-4 py-2 rounded">
               Time: <span id="timer">00:00</span>
             </div>
           </div>
@@ -20,10 +20,10 @@ export function DailySudokuPage(): string {
           <div class="sudoku-grid grid grid-cols-9 gap-1 mb-6 max-w-md mx-auto" id="sudoku-grid"></div>
 
           <div class="flex gap-4 justify-center">
-            <button id="check-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+            <button id="check-btn" class="bg-primary text-primary-foreground px-4 py-2 rounded hover:bg-primary/90 transition-colors">
               Check Solution
             </button>
-            <button id="hint-btn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+            <button id="hint-btn" class="bg-accent text-accent-foreground px-4 py-2 rounded hover:bg-accent/90 transition-colors">
               Get Hint
             </button>
           </div>
@@ -60,7 +60,7 @@ export function DailySudokuPage(): string {
             const cell = document.createElement('input');
             cell.type = 'text';
             cell.maxLength = 1;
-            cell.className = 'w-10 h-10 text-center border border-gray-300 focus:border-blue-500 focus:outline-none';
+            cell.className = 'w-10 h-10 text-center border border-border focus:border-primary focus:outline-none';
             cell.addEventListener('input', (e) => {
               const value = e.target.value;
               if (value && !/^[1-9]$/.test(value)) {
