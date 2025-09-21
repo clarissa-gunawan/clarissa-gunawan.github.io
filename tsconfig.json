@@ -3,7 +3,7 @@
     // Stable targets for broad browser support
     "lib": ["ES2023", "DOM", "DOM.Iterable"],
     "target": "ES6",
-    "module": "preseve",
+    "module": "preserve",
     "moduleDetection": "force",
 
     // Classic JSX with custom factory (no React)
