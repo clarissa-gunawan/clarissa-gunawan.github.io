@@ -5,6 +5,9 @@ A personal website built with Bun and Tailwind CSS, deployed on GitHub Pages.
 ## 🚀 Getting Started
 
 ```bash
+# Install bun
+curl -fsSL https://bun.com/install | bash
+
 # Install dependencies
 bun install
 
