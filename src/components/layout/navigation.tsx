@@ -1,4 +1,4 @@
-import { h } from '../../jsx/runtime';
+import { h } from "../../jsx/runtime";
 
 export interface NavigationProps {
   currentPage?: string;
@@ -6,7 +6,7 @@ export interface NavigationProps {
 
 export function Navigation({ currentPage }: NavigationProps = {}): string {
   const getLinkClass = (page: string) => {
-    const baseClass = 'text-primary hover:text-primary/80';
+    const baseClass = "text-primary hover:text-primary/80";
     return currentPage === page ? `${baseClass} font-bold` : baseClass;
   };
 
@@ -17,14 +17,17 @@ export function Navigation({ currentPage }: NavigationProps = {}): string {
           Clarissa Gunawan
         </a>
         <div class="flex items-center space-x-4">
-          <a href="work.html" class={getLinkClass('work')}>
-            Work
+          <a href="work.html" class={getLinkClass("work")}>
+            Experience
           </a>
-          <a href="touch-grass.html" class={getLinkClass('touch-grass')}>
-            Hiking
+          <a href="touch-grass.html" class={getLinkClass("touch-grass")}>
+            Outdoor Studio
           </a>
-          <a href="daily-sudoku.html" class={getLinkClass('daily-sudoku')}>
-            Sudoku
+          <a href="daily-sudoku.html" class={getLinkClass("daily-sudoku")}>
+            Mini Challenge
+          </a>
+          <a href="contact.html" class={getLinkClass("contact")}>
+            Contact
           </a>
           <button
             id="theme-toggle"
@@ -35,9 +38,12 @@ export function Navigation({ currentPage }: NavigationProps = {}): string {
                    aria-[pressed=true]:bg-primary aria-[pressed=true]:text-primary-foreground aria-[pressed=true]:border-primary
                    dark:text-primary dark:border-primary/40 dark:hover:bg-primary/20 dark:aria-[pressed=true]:bg-primary/80 dark:aria-[pressed=true]:border-primary/60"
           >
-            <span class="dark:hidden" aria-hidden="true">🌙</span>
-            <span class="hidden dark:inline" aria-hidden="true">☀️</span>
-            <span>Theme</span>
+            <span class="dark:hidden" aria-hidden="true">
+              🌙
+            </span>
+            <span class="hidden dark:inline" aria-hidden="true">
+              ☀️
+            </span>
           </button>
         </div>
       </div>

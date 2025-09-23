@@ -4,13 +4,13 @@
     {
       "id": "work",
       "title": "Work & Resume",
-      "description": "My professional experience and skills",
+      "description": "View my professional experience and skills",
       "color": "blue",
       "emoji": "💼"
     },
     {
       "id": "touch-grass",
-      "title": "Touch Grass",
+      "title": "Explore the Outdoors",
       "description": "Hiking adventures and outdoor experiences",
       "color": "green",
       "emoji": "🥾"
@@ -30,4 +30,3 @@
     "hoursHiking": 127
   }
 }
-
