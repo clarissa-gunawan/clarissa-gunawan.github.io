@@ -11,25 +11,6 @@ interface PageInfo {
 }
 
 export function HomePage(): string {
-  // Read site config
-  const siteConfig = JSON.parse(
-    readFileSync(
-      join(process.cwd(), "src", "data", "site-config.json"),
-      "utf8",
-    ),
-  );
-  const pages = siteConfig.pages as PageInfo[];
-
-  const pageCards = pages.map((page) => (
-    <a
-      href={`${page.id}.html`}
-      class="card block p-6 hover:shadow-md transition-shadow"
-    >
-      <h2 class="text-xl font-semibold mb-2 text-foreground">{page.title}</h2>
-      <p class="text-muted-foreground">{page.description}</p>
-    </a>
-  ));
-
   return (
     <main>
       {/* TODO: name and robotics and ai should stay in one line. the buttons should be larger  */}

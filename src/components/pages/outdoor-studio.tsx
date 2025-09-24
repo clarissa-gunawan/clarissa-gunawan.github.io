@@ -1,29 +1,85 @@
 import { h, Fragment } from '../../jsx/runtime.ts';
 import { BackButton } from '../layout/back-button.tsx';
-import { StatsSummary, StatsData } from '../ui/stats-summary.tsx';
-import { TierSection, TierData } from '../ui/tier-section.tsx';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
+export interface StatsData {
+  totalDistanceKm: number;
+  totalElevationM: number;
+  countriesExplored: number;
+  hours: number;
+}
+
+export function StatsSummary(stats: StatsData): string {
+  return (
+    <div class="stats-summary">
+      <div class="summary-stat">
+        <div class="summary-number">{stats.totalDistanceKm}</div>
+        <div class="summary-label">KM Hiked</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-number">{stats.totalElevationM.toLocaleString()}</div>
+        <div class="summary-label">M Climbed</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-number">{stats.countriesExplored}</div>
+        <div class="summary-label">Countries Explored</div>
+      </div>
+      <div class="summary-stat">
+        <div class="summary-number">{stats.hours}</div>
+        <div class="summary-label">Hours Hiking</div>
+      </div>
+    </div>
+  );
+}
+export interface Trail {
+  name: string;
+  location: string;
+  tier: string;
+  distanceKm: string;
+  elevationM: string;
+  timeH: string;
+  terrainDifficulty: string;
+  description: string;
+  link: string;
+  images: string;
+  gpx: string;
+}
+
+export function TrailCard(trail: Trail): string {
+  return (
+    <div class="trail-card">
+      <img src={trail.images[0]} alt={trail.name} class="trail-image" />
+      <div class="trail-content">
+        <h3>{trail.name}</h3>
+        <div class="trail-location">{trail.location}</div>
+        <div class="trail-stats">
+          <div class="trail-stat">
+            Distance<br />
+            <span>{trail.distanceKm}</span>
+          </div>
+          <div class="trail-stat">
+            Elevation<br />
+            <span>{trail.elevationM}</span>
+          </div>
+          <div class="trail-stat">
+            Time<br />
+            <span>{trail.timeH}</span>
+          </div>
+        </div>
+        <div class="trail-description">{trail.description}</div>
+        <div class="gpx-mini">
+          <div class="elevation-mini"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function OutdoorStudioPage(): string {
-  // Read trail data
-  const trailData = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'trails.json'), 'utf8'));
-  const siteConfig = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'site-config.json'), 'utf8'));
-  
-  const stats: StatsData = siteConfig.stats;
-  const tiers: Record<string, TierData> = trailData;
-
-  // Generate tier sections as JSX
-  const tierSections = Object.entries(tiers).map(([tierKey, tierData]) => (
-    <TierSection tierKey={tierKey} tierData={tierData} />
-  ));
-
-  // Header/Nav will be returned directly in JSX
-
-    /* removed stray JSX block here */
-
-  // Script will be returned directly in JSX
-
+  const trailData: Array<Trail> = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'trails.json'), 'utf8'));
+  const stats = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'trail-stats.json'), 'utf8'));
+   
   return (
     <Fragment>
       {BackButton()}
@@ -49,45 +105,13 @@ export function OutdoorStudioPage(): string {
             <button class="nav-dot w-2 h-8 bg-foreground/30 hover:bg-foreground/60 transition-colors" data-section="tiers"></button>
           </div>
         </nav>
-
-        <section id="random-spread" class="min-h-screen flex bg-background">
-          <div class="w-1/2 flex items-center p-16 lg:p-24">
-            <div class="max-w-lg">
-              <div class="mb-12">
-                <div class="text-xs text-muted-foreground tracking-widest uppercase mb-6">Discovery</div>
-                <h2 class="text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
-                  Serendipitous<br /><span class="font-thin italic">Trails</span>
-                </h2>
-                <div class="w-16 h-px bg-border mb-8"></div>
-                <p class="text-base text-muted-foreground leading-relaxed mb-8 font-light">
-                  Let chance guide your next adventure. Each trail tells a story,
-                  and sometimes the best stories are the ones we never planned to find.
-                </p>
-              </div>
-
-              <button id="generate-hike" class="bg-accent text-white px-6 py-3 text-sm font-light tracking-wide transition-colors hover:bg-accent/90">
-                Generate Trail
-              </button>
-
-              <div id="hike-profile" class="mt-12 hidden"></div>
-            </div>
-          </div>
-
-          <div class="w-1/2 relative overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Forest trail path"
-              class="w-full h-full object-cover"
-            />
-            <div class="absolute inset-0 bg-foreground/20"></div>
-            <div class="absolute bottom-8 left-8 text-white">
-              <div class="text-sm font-light mb-1">Serendipitous Discovery</div>
-              <div class="text-xs opacity-80">Photography by Clarissa Gunawan</div>
-            </div>
-            <div class="absolute inset-0 whale-shark-pattern opacity-10"></div>
-          </div>
+        <section>
+        <h1>Outdoor Studio</h1>
+        <button>
+        <span>Let's be practical</span>
+        <span>Let's be fancy</span>
+        </button>
         </section>
-
         <section id="stats-spread" class="min-h-screen flex bg-background">
           <div class="w-1/2 flex items-center p-16 lg:p-24">
             <div class="max-w-lg">
@@ -108,7 +132,15 @@ export function OutdoorStudioPage(): string {
 
           <div class="w-1/2 flex items-center justify-center p-16 lg:p-24">{StatsSummary(stats)}</div>
         </section>
+        <section>
+<div class="trail-grid">
+        {trailData.map((trail) => (
+          <TrailCard {...trail} />
+        ))}
+      </div>
 
+        </section>
+        {/*
         <section id="tiers-spread" class="min-h-screen bg-background">
           <div class="container mx-auto px-8 py-16">
             <div class="text-center mb-16">
@@ -126,7 +158,7 @@ export function OutdoorStudioPage(): string {
 
             <div id="tier-sections" class="space-y-16">{tierSections}</div>
           </div>
-        </section>
+        </section> */} 
       </main>
 
       <link rel="stylesheet" href="styles/pages/touch-grass.css" />
