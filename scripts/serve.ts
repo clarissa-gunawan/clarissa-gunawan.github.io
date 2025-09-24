@@ -4,12 +4,12 @@ const PORT = 3000;
 const DIST_DIR = "dist";
 const ALLOWED = new Set<string>([
   "index.html",
-  "work.html",
-  "touch-grass.html",
-  "daily-sudoku.html",
+  "work-experience.html",
+  "outdoor-studio.html",
+  "mini-challenge.html",
   "404.html",
   "main.css",
-  "styles/pages/touch-grass.css",
+  "styles/pages/outdoor-studio.css",
 ]);
 
 serve({

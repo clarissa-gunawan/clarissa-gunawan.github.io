@@ -1,4 +1,4 @@
-import { h, Fragment } from '../../jsx/runtime';
+import { h, Fragment } from '../../jsx/runtime.ts';
 import { BackButton } from '../layout/back-button.tsx';
 
 export function WorkPage(): string {

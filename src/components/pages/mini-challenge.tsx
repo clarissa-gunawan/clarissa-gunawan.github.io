@@ -1,7 +1,7 @@
-import { h, Fragment } from '../../jsx/runtime';
+import { h, Fragment } from '../../jsx/runtime.ts';
 import { BackButton } from '../layout/back-button.tsx';
 
-export function DailySudokuPage(): string {
+export function MiniChallengePage(): string {
   return (
     <Fragment>
       {BackButton()}

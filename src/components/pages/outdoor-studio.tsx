@@ -1,11 +1,11 @@
-import { h, Fragment } from '../../jsx/runtime';
+import { h, Fragment } from '../../jsx/runtime.ts';
 import { BackButton } from '../layout/back-button.tsx';
 import { StatsSummary, StatsData } from '../ui/stats-summary.tsx';
 import { TierSection, TierData } from '../ui/tier-section.tsx';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-export function TouchGrassPage(): string {
+export function OutdoorStudioPage(): string {
   // Read trail data
   const trailData = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'trails.json'), 'utf8'));
   const siteConfig = JSON.parse(readFileSync(join(process.cwd(), 'src', 'data', 'site-config.json'), 'utf8'));
