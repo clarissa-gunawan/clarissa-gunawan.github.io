@@ -10,7 +10,13 @@ export function WorkPage(): string {
       <main>
         <h1 class="text-3xl font-bold mb-6">Work & Resume</h1>
         <div class="prose max-w-none">
-        <button>Download Resume</button>
+        <a 
+          href="/ClarissaGunawanResume.pdf" 
+          download="ClarissaGunawanResume.pdf"
+          class="inline-block px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
+        >
+          Download Resume
+        </a>
           <p class="text-lg mb-6">My resume and work experience will go here.</p>
           <div class="card p-6">
             <h2 class="text-xl font-semibold mb-4">Coming Soon</h2>

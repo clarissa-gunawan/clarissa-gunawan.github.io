@@ -1,6 +1,22 @@
-import { writeFileSync, mkdirSync, existsSync, copyFileSync } from "fs";
+import { writeFileSync, mkdirSync, existsSync, copyFileSync, readdirSync, statSync } from "fs";
 import { join } from "path";
 import { execSync } from "child_process";
+
+// Recursively copy directory
+function copyRecursive(src: string, dest: string) {
+  if (!existsSync(src)) return;
+  
+  const stats = statSync(src);
+  if (stats.isDirectory()) {
+    mkdirSync(dest, { recursive: true });
+    const files = readdirSync(src);
+    for (const file of files) {
+      copyRecursive(join(src, file), join(dest, file));
+    }
+  } else {
+    copyFileSync(src, dest);
+  }
+}
 
 // Import components
 import { Layout } from "../src/components/layout/layout.tsx";
@@ -67,6 +83,13 @@ async function buildSite() {
     "src/styles/pages/outdoor-studio.css",
     join(distDir, "styles", "pages", "outdoor-studio.css"),
   );
+
+  // Copy static assets (PDFs, images, etc.)
+  console.log("📦 Copying static assets...");
+  const staticDir = "static";
+  if (existsSync(staticDir)) {
+    copyRecursive(staticDir, distDir);
+  }
 
   // Create .nojekyll to disable Jekyll processing on GitHub Pages
   if (!existsSync(join(distDir, ".nojekyll"))) {
