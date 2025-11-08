@@ -24,9 +24,6 @@ export function Navigation({ currentPage }: NavigationProps = {}): string {
           <a href="outdoor-studio.html" class={getLinkClass("outdoor-studio")}>
             Outdoor Studio
           </a>
-          <a href="mini-challenge.html" class={getLinkClass("mini-challenge")}>
-            Mini Challenge
-          </a>
           <button
             id="theme-toggle"
             type="button"

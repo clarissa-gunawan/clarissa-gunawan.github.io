@@ -7,7 +7,6 @@ import { Layout } from "../src/components/layout/layout.tsx";
 import { HomePage } from "../src/components/pages/home.tsx";
 import { WorkPage } from "../src/components/pages/work-experience.tsx";
 import { OutdoorStudioPage } from "../src/components/pages/outdoor-studio.tsx";
-import { MiniChallengePage } from "../src/components/pages/mini-challenge.tsx";
 import { NotFoundPage } from "../src/components/pages/not-found.tsx";
 
 async function buildSite() {
@@ -44,15 +43,6 @@ async function buildSite() {
     showNav: false, // Outdoor Studio has its own navigation
   });
   writeFileSync(join(distDir, "outdoor-studio.html"), touchGrassHTML);
-
-  // Generate mini-challenge page
-  console.log("🧩 Building mini-challenge page...");
-  const sudokuHTML = Layout({
-    title: "Mini Challenge - Clarissa Gunawan",
-    content: MiniChallengePage(),
-    currentPage: "mini-challenge",
-  });
-  writeFileSync(join(distDir, "mini-challenge.html"), sudokuHTML);
 
   // Generate 404 page
   console.log("🚫 Building 404 page...");

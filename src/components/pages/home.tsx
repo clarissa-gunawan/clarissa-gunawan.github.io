@@ -38,16 +38,8 @@ export function HomePage(): string {
 
         <div class="text-muted-foreground">
           <h2 class="text-3xl md:text-4xl mt-12">
-            I'm a multidisciplinary software engineer, outdoor adventurer, and
-            <a
-              class="hover:text-foreground"
-              href="mini-challenge.html"
-            >
-              {" "}
-              sudoku enthusiast
-            </a>
-            . My goal is to build bridges between teams and technologies to
-            create delightful products.{" "}
+            I'm a multidisciplinary software engineer, outdoor adventurer, and a mini sudoku enthusiast. 
+            My goal is to build bridges between teams and technologies to create delightful products.{" "}
           </h2>
         </div>
         <div  class="text-muted-foreground">

@@ -6,7 +6,6 @@ const ALLOWED = new Set<string>([
   "index.html",
   "work-experience.html",
   "outdoor-studio.html",
-  "mini-challenge.html",
   "404.html",
   "main.css",
   "styles/pages/outdoor-studio.css",
