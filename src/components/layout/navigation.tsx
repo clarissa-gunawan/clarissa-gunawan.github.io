@@ -30,7 +30,7 @@ export function Navigation({ currentPage }: NavigationProps = {}): string {
             aria-pressed="false"
             aria-label="Toggle theme"
             class="inline-flex items-center gap-1 rounded-md px-2 py-1 text-sm text-primary hover:text-primary/80 
-                   border-0 outline-1 bg-transparent cursor-pointer aria-[pressed=true]:text-primary"
+                   border-0 outline-0 bg-transparent cursor-pointer aria-[pressed=true]:text-primary"
           >
             <span id="theme-sun" class="dark:hidden inline-flex items-center" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
